@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "dynacorp-api"
+version = "0.1.0"
+description = "Dynacorp API service"
+authors = ["Jason Baker <bake2352@stthomas.edu>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+cryptography = "^36.0.0"
+fastapi = "^0.70.0"
+gunicorn = "^20.1.0"
+httptools = "^0.3.0"
+uvicorn = "^0.15.0"
+flake8 = "^4.0.1"
+uvloop = "^0.16.0"
+pytest = "^6.2.5"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
