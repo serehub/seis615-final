@@ -11,4 +11,3 @@ f = Fernet(key)
 token = f.encrypt(bytes(x, 'utf-8'))
 
 print(token)
-
