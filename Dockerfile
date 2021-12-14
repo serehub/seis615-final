@@ -7,6 +7,5 @@ RUN apt-get update -y
 RUN apt-get install python-pip -y
 RUN apt-get install python-dev -y
 COPY app/* /usr/src/app/
-RUN pip install -r app/requirements.txt
 ENTRYPOINT python
 CMD main.py
