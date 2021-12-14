@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+  pre_build:
+    commands:
+      - pip install -r app/requirements.txt
+      - flake8 app/*.py
+  build:
+    commands:
+      - echo Build docker container.
+      - docker build -t $REPOSITORY_URI:latest
+      
+  post_build:
+    commands:
+      - docker push $REPOSITORY_URI:latest
+
+artifacts:
+  files:
+    - '**/*'
+  name: python-app-$(date +%y%m%d%H%M).zip
