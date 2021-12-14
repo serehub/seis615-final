@@ -10,8 +10,8 @@ phases:
       - flake8 app/*.py
   build:
     commands:
-      - echo Build . docker container.
-      - docker build -t $REPOSITORY_URI:latest
+      - echo Build docker container.
+      - docker build . -t $REPOSITORY_URI:latest
       
   post_build:
     commands:
